@@ -12,5 +12,7 @@ Ordenação por Intercalação
 	> ./[PROGRAMA]
 	* Onde [PROGRAMA] é o código que deseja executar.
 5.  O arquivo "**cep_ordenado_final.dat**" será o resultado final de toda divisão, ordenação e intercalação.
-	
+        ***OBS**: A variável "**final**" pode ser alterada resultando na alteração da quantidade de blocos a ser dividida e intercalada (apenas potências de 2 foram testadas).
+
+        
     **Nome do Aluno:** João Victor Machado Rangel

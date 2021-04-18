@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 	Endereco ea, eb;
    char buffer[30];
    char novoNome[]= "cep_ordenado_final.dat";
-   int inicio= 0, final=16;
+   int inicio= 0, final=16; // variável "final" controla a quantidade de blocos a ser dividido e intercalado.
 
 	
    while( inicio<final-1)

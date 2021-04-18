@@ -28,7 +28,7 @@ int main (int argc, char**argv)
     long posicao, qtd, tamanhoBloco;
     char buffer[30];
     char novoNome[]= "cep_ordenado_final.dat";
-    int inicio= 0, final=16;
+    int inicio= 0, final=16; // variável "final" controla a quantidade de blocos a ser dividido e intercalado.
 
     f= fopen("cep.dat","r");
     fseek(f,0,SEEK_END);

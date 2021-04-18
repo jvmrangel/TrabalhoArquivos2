@@ -26,7 +26,7 @@ int main (int argc, char**argv)
     FILE *f, *a, *b, *saida;
     Endereco *e, *ea, *eb;
     long posicao, qtd, tamanhoBloco;
-    int final =16;
+    int final =16; // variável "final" controla a quantidade de blocos a ser dividido e intercalado.
     char buffer[30];
 
     f= fopen("cep.dat","r");
