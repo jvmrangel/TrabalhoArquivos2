@@ -43,11 +43,11 @@ int main (int argc, char**argv)
 
     rewind(f);
 
-    // Divide o cep.dat em final blocos //
+    // Divide o cep.dat em 16 blocos //
 
     for (int i=0; i<final; i++)   
     {   
-        if(i==15)
+        if(i==final-1)
             tamanhoBloco=tamanhoBloco+(qtd%final);
 
         e= (Endereco*) malloc(tamanhoBloco*sizeof(Endereco));
@@ -58,7 +58,7 @@ int main (int argc, char**argv)
         }
         qsort(e,tamanhoBloco,sizeof(Endereco),compara);
         printf("Bloco %d Ordenado = OK\n", i);
-        sprintf(buffer, "cep_%d.dat", i);
+        sprintf(buffer, "cep_%d.dat", i); //atribui o nome do arquivo referindo a posição do bloco
         saida = fopen(buffer,"w");
         fwrite(e,sizeof(Endereco),tamanhoBloco,saida);
         fclose(saida);
@@ -122,7 +122,7 @@ int main (int argc, char**argv)
 
     sprintf(buffer, "cep_%d.dat", final-1);
 
-    if(rename(buffer, novoNome) == 0) 
+    if(rename(buffer, novoNome) == 0)   // renomeia ultimo cep_*.dat renomeado 
     {
         printf("Arquivo renomeado com sucesso");
     } 

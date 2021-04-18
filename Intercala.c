@@ -81,7 +81,7 @@ int main(int argc, char** argv)
 
    sprintf(buffer, "cep_%d.dat", final-1);
 
-   if(rename(buffer, novoNome) == 0) 
+   if(rename(buffer, novoNome) == 0)  // renomeia ultimo cep_*.dat renomeado 
    {
       printf("Arquivo renomeado com sucesso");
    } 
